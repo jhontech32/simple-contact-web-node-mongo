@@ -1,0 +1,11 @@
+    <div class="mt-3">
+        <h2>Web server</h2>
+        <p>Hallo <%= nama %></p>
+        <H2>Daftar Contact :</H2>
+        <% datas.forEach(item => { %>
+            <ul>
+                <li>Nama: <%= item.nama %></li>
+                <li>Email: <%= item.email %></li>
+            </ul>
+        <% }) %>
+    </div>

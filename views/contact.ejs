@@ -1,0 +1,41 @@
+<div class="mt-3">
+    <p><h1>Daftar Contact</h1></p>
+    <a href="/contact/add">
+        <button type="button" class="btn btn-primary mb-3">
+            [+] Tambah Data Kontak
+         </button>
+    </a>
+
+    <% if (msg.length !== 0) { %>
+        <div class="alert alert-success" role="alert">
+            <%= msg %> 
+          </div>
+    <% } %>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nama</th>
+            <th scope="col">No HP</th>
+            <th scope="col">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% contacts.forEach(item => { %>
+            <tr>
+                <th scope="row">1</th>
+                <td><%= item.nama %> </td>
+                <td><%= item.nohp %> </td>
+                <td>
+                    <a href="/contact/detail/<%= item.nama %> ">
+                    <button type="button" class="btn btn-success">
+                        Details
+                    </button>
+                </a>
+                </td>
+              </tr>
+        <% }) %>
+        </tbody>
+      </table>
+</div>
